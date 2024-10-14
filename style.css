@@ -81,6 +81,7 @@ a:active {
 /* ========== CUSTOM PROPERTIES ========== */
 :root {
   /* fonts */
+  --fs-button: 0.875rem;
   --fs-body: 1rem;
   --fs-heading-s: 1.125rem;
   --fs-heading-m: 1.5rem;
@@ -96,11 +97,83 @@ a:active {
   --clr-neutral-800: #0e0e0e;
 
   --clr-accent-400: #e10600;
+
+  /* spacing & values*/
+  --size-m: 3.5rem;
+  --section-padding-inline: 1rem;
 }
 
-/* ========== UTILITY CLASS ========== */
+/* ========== UTILITIES CLASS ========== */
+/* ----- AESTETING ----- */
+.dark-theme {
+  background-color: var(--clr-neutral-800);
+  color: var(--clr-neutral-100);
+}
+
 .accent-clr {
   color: var(--clr-accent-400);
+}
+
+.button {
+  background-color: var(--clr-accent-400);
+  color: var(--clr-neutral-100);
+
+  font-size: var(--fs-button);
+  font-weight: var(--fw-semi-bold);
+
+  border-radius: 2rem;
+
+  padding: 0.5rem 2rem;
+}
+
+.button-spacing {
+  margin-top: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+/* ----- LAYOUT ----- */
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.txt-alg-right {
+  text-align: right;
+}
+
+.txt-alg-center {
+  text-align: center;
+}
+
+.cover {
+  object-fit: cover;
+  object-position: center;
+}
+
+.overlay {
+  border-image: linear-gradient(red, blue) fill 1;
+}
+
+/* -----SPACING ----- */
+
+.padding-block-m {
+  padding-block: var(--size-m);
+}
+
+.section-padding-inline {
+  padding-inline: var(--section-padding-inline);
+}
+
+.padding-bottom-m {
+  padding-bottom: var(--size-m);
+}
+
+.space-b-m {
+  margin-bottom: var(--size-m);
+}
+
+.space-t-m {
+  margin-top: var(--size-m);
 }
 
 /* ========== GLOBAL CSS ========== */
@@ -127,10 +200,101 @@ h1 {
 
 h2 {
   font-size: var(--fs-heading-l);
-  font-weight: var(--fw-normal);
+  font-weight: var(--fw-semi-bold);
+
+  margin-bottom: 3.5rem;
 }
+
 h3,
 h4 {
   font-size: var(--fs-heading-m);
   font-weight: var(--fw-normal);
+
+  margin-bottom: 1.5rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+hr {
+  border-top: 1px solid var(--clr-neutral-300);
+}
+
+/* ========== CSS ========== */
+
+/* ---------- HERO SECTION ---------- */
+.section-hero {
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-medium);
+
+  border: 3px solid rgb(240, 118, 139);
+}
+
+.hero-video {
+  height: 30rem;
+  position: relative;
+}
+
+.position-hero-titre {
+  position: absolute;
+  top: 2.5rem;
+  left: 1rem;
+  right: 1rem;
+  font-weight: var(--fw-semi-bold);
+}
+
+.position-hero-texte {
+  position: absolute;
+  top: 22rem;
+  left: 1rem;
+  right: 1rem;
+}
+
+/* ---------- A PROPOS SECTION ---------- */
+
+.section-a-propos {
+  padding-inline: 1rem;
+
+  & h2 {
+    font-size: var(--fs-heading-m);
+    margin-top: 1rem;
+    margin-bottom: 1.75rem;
+  }
+}
+
+/* ---------- EVENT SECTION ---------- */
+
+.section-event {
+  & h2 {
+    margin-bottom: 4.5rem;
+  }
+}
+
+/* ---------- CTA SECTION---------- */
+
+.section-cta {
+  & h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* ---------- FAQ SECTION ---------- */
+.section-faq {
+  & h3 {
+    font-weight: var(--fw-semi-bold);
+    margin-bottom: 2rem;
+  }
+}
+
+.section-faq p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* ---------- CONTACT SECTION ---------- */
+
+form {
+  color: green;
 }
