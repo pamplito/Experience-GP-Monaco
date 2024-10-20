@@ -21,7 +21,7 @@
       <!-- ========== Hero Section ==========-->
       <section class="section-hero">
         <backroung-image>
-          <video class="hero-video cover">
+          <video class="hero-video cover" autoplay loop>
             <!-- autoplay loop -->
             <source src="./Video/GP Pluie.webm" />
           </video>
@@ -145,35 +145,69 @@
           Informations et estimation sur mesure. <br />
           Nous vous recontacterons dans les plus brefs délais.
         </p>
-        <form action="https://formsubmit.co/your@email.com" method="POST">
-          <div>
-            <label for="">Nom</label>
-            <input type="text" name="name" required />
+        <form
+          action="https://formsubmit.co/your@email.com"
+          method="POST"
+          class="form-grid"
+        >
+          <div class="input-style">
+            <label for="nameinput">Nom</label>
+            <input
+              type="text"
+              name="name"
+              id="nameinput"
+              placeholder="entrez votre nom complet"
+              required
+            />
           </div>
 
-          <div>
-            <label for="">Email</label>
-            <input type="email" name="email" required />
+          <div class="input-style">
+            <label for="emailinput">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="emailinput"
+              placeholder="entrez votre email"
+              inputmode="email"
+              required
+            />
           </div>
 
-          <div>
-            <label for="">Message</label>
-            <input type="text" />
+          <div class="input-style">
+            <label for="messageinput">Message</label>
+            <textarea
+              name="message"
+              placeholder="posez nous toutes vos questions"
+              id="messageinput"
+              rows="7"
+            >
+            </textarea>
           </div>
 
-          <button type="submit">Envoyer</button>
+          <button class="btn-submit" type="submit">
+            <img src="./Image/mail.svg" alt="" />
+          </button>
         </form>
       </section>
 
       <!-- ========== FOOTER ========== -->
-      <footer class="dark-theme | padding-bottom-m section-padding-inline">
+      <footer class="dark-theme | section-padding-inline">
         <hr / class="space-b-m">
 
-        <h2>Expérience GP <br />by Exclive Events</h2>
+        <h2 class="txt-alg-center">
+          Expérience GP <br />
+          <span class="fs-style-xs">by</span>
+          <a href="https://www.exclusive-events.mc/" target="_blank"
+            >Exclusive Events</a
+          >
+        </h2>
 
         <hr />
-        <p>Copyright</p>
-        <a href="#">Mentions Légales</a>
+
+        <div class="footer-menu flex-space-between">
+          <p>Copyright</p>
+          <a href="#">Mentions Légales</a>
+        </div>
       </footer>
     </main>
   </body>

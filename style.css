@@ -81,6 +81,7 @@ a:active {
 /* ========== CUSTOM PROPERTIES ========== */
 :root {
   /* fonts */
+  --fs-xs: 0.75rem;
   --fs-button: 0.875rem;
   --fs-body: 1rem;
   --fs-heading-s: 1.125rem;
@@ -135,6 +136,11 @@ a:active {
 .center {
   display: flex;
   justify-content: center;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
 }
 
 .txt-alg-right {
@@ -296,5 +302,104 @@ hr {
 /* ---------- CONTACT SECTION ---------- */
 
 form {
-  color: green;
+  color: var(--clr-neutral-100);
+}
+
+.form-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+label {
+  width: 25%;
+}
+
+/* ... Input Styling ... */
+
+input {
+  height: 2rem;
+}
+
+input,
+textarea {
+  background: transparent;
+  color: var(--clr-neutral-100);
+
+  box-sizing: border-box;
+  width: 100%;
+
+  border: none;
+  border-radius: 0.2rem;
+
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--clr-neutral-300);
+  font-size: 0.75rem;
+
+  transition: color 0.3s ease;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: transparent;
+}
+
+.input-style {
+  display: flex;
+  gap: 1rem;
+
+  border-bottom: 1px solid var(--clr-neutral-300);
+}
+
+textarea {
+}
+
+/* ... Submit Button ... */
+
+.btn-submit {
+  font-family: inherit;
+  background-color: var(--clr-accent-400);
+  border: none;
+  padding: 0.75rem;
+  margin: auto;
+
+  cursor: pointer;
+
+  width: 4rem;
+  aspect-ratio: 1;
+
+  border-radius: 50%;
+
+  display: grid;
+  place-content: center;
+
+  transition: 0.1s ease-in-out;
+}
+
+.btn-submit:hover,
+.btn-submit:focus {
+  transform: scale(110%);
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+  & h2 {
+    font-size: var(--fs-heading-m);
+  }
+
+  & hr {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.fs-style-xs {
+  font-size: var(--fs-xs);
+}
+
+.footer-menu {
+  font-size: var(--fs-xs);
 }
