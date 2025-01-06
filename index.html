@@ -7,6 +7,7 @@
     <title>Experience GP Monaco</title>
 
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,7 +22,7 @@
       <!-- ========== Hero Section ==========-->
       <section class="section-hero">
         <!-- <backroung-image> -->
-        <video class="hero-video cover" autoplay muted="true" loop playinline>
+        <video class="hero-video cover" controls muted="true" loop playinline>
           <source src="./Video/GP Pluie.webm" type="video/webm" />
           <source src="./Video/GP Pluie L.mp4" type="video/mp4" />
         </video>
@@ -38,9 +39,9 @@
 
       <!-- ========== A PROPOS ========== -->
       <section
-        class="section-a-propos | padding-block-m section-padding-inline"
+        class="section-a-propos | padding-block-xl section-padding-inline"
       >
-        <hr / class="space-b-m">
+        <hr / class="space-b-xl">
         <h2>A PROPOS</h2>
         <p>
           Experience GP Monaco vous offre une expérience unique au cœur du Grand
@@ -58,7 +59,7 @@
 
       <!-- ========== EVENT ========== -->
       <section
-        class="section-event dark-theme | padding-block-m section-padding-inline"
+        class="section-event dark-theme | padding-block-xl section-padding-inline"
       >
         <h2>EVENEMENTS</h2>
         <!-- carroussel a creer -->
@@ -70,9 +71,9 @@
             Ressentez le frisson des moteurs rugissants à quelques mètres de
             vous.
           </p>
-          <div class="button-spacing">
-            <a class="button" href="#contact-section">Contactez Nous</a>
-          </div>
+          <!-- <div class="center button-spacing"> -->
+          <!-- <a class="button" href="#contact-section">Contactez Nous</a> -->
+          <!-- </div> -->
         </div>
         <img src="./Image/F1 image free.jpg" alt="" />
       </section>
@@ -80,9 +81,9 @@
       <!-- ========== CTA ========== -->
 
       <section
-        class="section-cta dark-theme | padding-bottom-m section-padding-inline"
+        class="section-cta dark-theme | padding-bottom-xl section-padding-inline"
       >
-        <hr / class="space-b-m">
+        <hr / class="space-b-xl">
         <h2>
           <span class="accent-clr">VIVEZ</span> CETTE <br />EXPERIENCE UNIQUE
         </h2>
@@ -92,7 +93,7 @@
       </section>
 
       <!-- ========== FAQ ========== -->
-      <section class="section-faq | padding-block-m section-padding-inline">
+      <section class="section-faq | padding-block-xl section-padding-inline">
         <h2>FAQ</h2>
         <h3>Le prix des billets du Grand Prix est-il inclus ?</h3>
         <p>
@@ -100,7 +101,7 @@
           dans notre offre de location de terrasse. Les pass d'acces vous serons
           remis le jour de l'evenement.
         </p>
-        <hr / class="space-b-m space-t-m">
+        <hr / class="space-b-s space-t-xl">
         <h3>Peut-on inviter des personnes différentes chaque jour ?</h3>
         <p>
           Oui, vous avez la flexibilité d'inviter des personnes différentes
@@ -109,7 +110,7 @@
           des raisons personnelles ou professionnelles. Nous vous demanderons
           simplement de nous fournir la liste des invités à l'avance.
         </p>
-        <hr / class="space-b-m space-t-m">
+        <hr / class="space-b-s space-t-xl">
         <h3>Quelle est la capacité maximale d'une terrasse ?</h3>
         <p>
           La capacité maximale de nos terrasses varie en fonction de leur
@@ -120,7 +121,7 @@
           contacter pour connaître les options disponibles qui correspondent le
           mieux à la taille de votre groupe.
         </p>
-        <hr / class="space-b-m space-t-m">
+        <hr / class="space-b-s space-t-xl">
         <h3>Quels types de prestations de restauration proposez-vous ?</h3>
         <p>
           Tout est possible, de la formule traiteur classique à l'expérience
@@ -136,9 +137,78 @@
         </p>
       </section>
 
+      <!-- ========== FAQ ACCORDION ========== -->
+      <section class="section-faq | padding-block-xl section-padding-inline">
+        <h2>FAQ</h2>
+
+        <button class="accordion">
+          <h3>Le prix des billets du Grand Prix est-il inclus ?</h3>
+        </button>
+        <div class="panel">
+          <p>
+            Oui, le prix des billets d'entrée au Grand Prix de Monaco est inclus
+            dans notre offre de location de terrasse. Les pass d'acces vous
+            serons remis le jour de l'evenement.
+          </p>
+        </div>
+        <hr / class="space-b-s space-t-xl">
+
+        <button class="accordion">
+          <h3>Peut-on inviter des personnes différentes chaque jour ?</h3>
+        </button>
+        <div class="panel">
+          <p>
+            Oui, vous avez la flexibilité d'inviter des personnes différentes
+            chaque jour de l'événement. Nous comprenons que vous pourriez
+            vouloir partager cette expérience unique avec divers invités, que ce
+            soit pour des raisons personnelles ou professionnelles. Nous vous
+            demanderons simplement de nous fournir la liste des invités à
+            l'avance.
+          </p>
+        </div>
+        <hr / class="space-b-s space-t-xl">
+
+        <h3>
+            Quelle est la capacité maximale d'une terrasse ?
+        </h3>
+      </button>
+      <div class="panel">
+                <p>
+          La capacité maximale de nos terrasses varie en fonction de leur
+          taille. Chaque année, une autorisation spécifique est émise par les
+          autorités compétentes, définissant la capacité d'accueil de chaque
+          espace. Nous nous conformons strictement à ces réglementations pour
+          garantir votre sécurité et votre confort. N'hésitez pas à nous
+          contacter pour connaître les options disponibles qui correspondent le
+          mieux à la taille de votre groupe.
+        </p>
+      </div>
+        <hr / class="space-b-s space-t-xl">
+
+        <h3>
+            Quels types de prestations de restauration proposez-vous ?
+        </h3>
+      </button>
+      <div class="panel">
+              <p>
+          Tout est possible, de la formule traiteur classique à l'expérience
+          gastronomique la plus raffinée. Nous pouvons organiser un service de
+          chef privé qui cuisine en direct sous vos yeux, mettre en place des
+          buffets variés, ou assurer un service à table digne des plus grands
+          restaurants.
+        </p>
+        <p>
+          Notre flexibilité nous permet de nous adapter aux attentes spécifiques
+          de chaque client, qu'il s'agisse d'un cocktail dînatoire informel ou
+          d'un repas gastronomique élaboré.
+        </p>
+      </div>
+  
+      </section>
+
       <!-- ========== CONTACT ========== -->
       <section
-        class="section-contact dark-theme | padding-block-m section-padding-inline"
+        class="section-contact dark-theme | padding-block-xl section-padding-inline"
         id="contact-section"
       >
         <h2 class="accent-clr">CONTACT</h2>
@@ -193,7 +263,7 @@
 
       <!-- ========== FOOTER ========== -->
       <footer class="dark-theme | section-padding-inline">
-        <hr / class="space-b-m">
+        <hr / class="space-b-xl">
 
         <h2 class="txt-alg-center">
           Expérience GP <br />
