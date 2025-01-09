@@ -342,8 +342,9 @@ hr {
 /* ---------- FAQ SECTION ---------- */
 .section-faq {
   & h3 {
-    font-weight: var(--fw-medium);
-    margin-bottom: var(--space-l);
+    font-weight: var(--fw-normal);
+    /* margin-bottom: var(--space-xl); */
+    margin-bottom: 0;
   }
 }
 
@@ -355,10 +356,10 @@ hr {
 
 /* Style of the button/questions to open and close the accordion panel */
 .accordion {
-  /* background-color: #eee;
-  color: #444; */
+  background-color: inherit;
   cursor: pointer;
-  padding: 18px;
+
+  /* padding: 18px; */
   width: 100%;
   text-align: left;
   border: none;
@@ -368,14 +369,20 @@ hr {
 
 .active,
 .accordion:hover {
-  background-color: #ccc;
-  box-shadow: 0px 15px 10px -15px rgba(0, 0, 0, 0.427);
+  color: #000000;
+  /* box-shadow: 0px 15px 10px -15px rgba(0, 0, 0, 0.427); */
   /* box-shadow: 0px 15px 10px -15px #111;     */
+
+  & h3 {
+    font-weight: var(--fw-medium);
+    transition: 0.2s ease-in-out;
+  }
 }
 
 /* Style of the accordion panel */
 .panel {
-  padding: 0 18px;
+  padding: 0 1rem;
+  margin-block: 1rem;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
