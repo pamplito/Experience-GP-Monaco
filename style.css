@@ -222,6 +222,11 @@ a:active {
 .space-b-s {
   margin-bottom: var(--space-s);
 }
+
+.space-b-m {
+  margin-bottom: var(--space-m);
+}
+
 .space-b-xl {
   margin-bottom: var(--space-xl);
 }
@@ -281,10 +286,70 @@ hr {
 
 /* ========== CSS ========== */
 
+/* ---------- HERO SECTION MAGAZINE STYLE ---------- */
+
+/* --- Marquee --- */
+
+.marquee {
+  border: 1px solid rgb(105, 168, 10);
+  height: 5rem;
+  margin-top: 5rem;
+
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes scrollleft {
+  to {
+    left: -40%;
+  }
+}
+
+.item {
+  border: 1px solid red;
+
+  font-size: var(--step-3);
+  font-weight: var(--fw-semi-bold);
+  color: var(--clr-neutral-300);
+  left: 100%;
+  animation-name: scrollleft;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  position: absolute;
+}
+
+.item1 {
+  animation-delay: 0s;
+}
+.item2 {
+  animation-delay: 5.5s;
+}
+.item3 {
+  animation-delay: 9.5s;
+}
+.item4 {
+  animation-delay: 15s;
+}
+.item5 {
+  animation-delay: 19s;
+}
+/* .item6 {
+  animation-delay: calc(20s / 8 * (8 - 6) * -1);
+}
+.item7 {
+  animation-delay: calc(20s / 8 * (8 - 7) * -1);
+}
+.item8 {
+  animation-delay: calc(20s / 8 * (8 - 8) * -1);
+} */
+
 /* ---------- HERO SECTION ---------- */
 .section-hero {
   color: var(--clr-neutral-100);
   font-weight: var(--fw-medium);
+  position: relative;
 
   /* border: 3px solid rgb(240, 118, 139); */
 }
@@ -342,8 +407,9 @@ hr {
 /* ---------- FAQ SECTION ---------- */
 .section-faq {
   & h3 {
-    font-weight: var(--fw-medium);
-    margin-bottom: var(--space-l);
+    font-weight: var(--fw-normal);
+    /* margin-bottom: var(--space-xl); */
+    margin-bottom: 0;
   }
 }
 
@@ -355,10 +421,10 @@ hr {
 
 /* Style of the button/questions to open and close the accordion panel */
 .accordion {
-  /* background-color: #eee;
-  color: #444; */
+  background-color: inherit;
   cursor: pointer;
-  padding: 18px;
+
+  /* padding: 18px; */
   width: 100%;
   text-align: left;
   border: none;
@@ -368,14 +434,20 @@ hr {
 
 .active,
 .accordion:hover {
-  background-color: #ccc;
-  box-shadow: 0px 15px 10px -15px rgba(0, 0, 0, 0.427);
+  color: #000000;
+  /* box-shadow: 0px 15px 10px -15px rgba(0, 0, 0, 0.427); */
   /* box-shadow: 0px 15px 10px -15px #111;     */
+
+  & h3 {
+    font-weight: var(--fw-medium);
+    transition: 0.2s ease-in-out;
+  }
 }
 
 /* Style of the accordion panel */
 .panel {
-  padding: 0 18px;
+  padding: 0 1rem;
+  margin-block: 1rem;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
